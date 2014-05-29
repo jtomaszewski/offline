@@ -193,7 +193,8 @@ Offline.check = ->
 
   Offline.checks[Offline.getOption('checks.active')]()
 
-Offline.confirmUp = Offline.confirmDown = Offline.check
+Offline.confirmUp = Offline.markUp
+Offline.confirmDown = Offline.check
 
 Offline.onXHR = (cb) ->
   monitorXHR = (req, flags) ->

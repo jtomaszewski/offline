@@ -236,7 +236,9 @@
     return Offline.checks[Offline.getOption('checks.active')]();
   };
 
-  Offline.confirmUp = Offline.confirmDown = Offline.check;
+  Offline.confirmUp = Offline.markUp;
+
+  Offline.confirmDown = Offline.check;
 
   Offline.onXHR = function(cb) {
     var monitorXHR, _XDomainRequest, _XMLHttpRequest;
